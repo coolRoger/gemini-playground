@@ -271,7 +271,7 @@ async function connectToWebsocket() {
 						voiceName: voiceSelect.value, // You can change voice in the config.js file
 					},
 				},
-				languageCode: "	cmn-CN",
+				languageCode: "cmn-CN",
 			},
 		},
 		systemInstruction: {
