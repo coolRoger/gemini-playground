@@ -47,20 +47,21 @@ async function handleWebSocket(req: Request): Promise<Response> {
 	};
 
 	clientWs.onclose = (event) => {
-		console.log("Client connection closed");
+		console.log("Client connection closed", {event});
 		if (targetWs.readyState === WebSocket.OPEN) {
 			targetWs.close(1000, event.reason);
 		}
 	};
 
 	targetWs.onclose = (event) => {
-		console.log("Gemini connection closed");
+		console.log("Gemini connection closed", {event});
 		if (clientWs.readyState === WebSocket.OPEN) {
 			clientWs.close(event.code, event.reason);
 		}
 	};
 
 	targetWs.onerror = (error) => {
+		console.log("Gemini connection closed", {error});
 		console.error("Gemini WebSocket error:", error);
 	};
 
