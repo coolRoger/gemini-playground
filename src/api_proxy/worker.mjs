@@ -211,7 +211,7 @@ const fieldsMap = {
   top_p: "topP",
   top_k: "topK", // non-standard
   frequency_penalty: "frequencyPenalty",
-  presence_penalty: "presencePenalty",
+  presence_penalty: "presencePenalty"
 };
 const transformConfig = (req) => {
   let cfg = {};
