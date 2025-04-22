@@ -32,7 +32,10 @@ async function handleWebSocket(req: Request): Promise<Response> {
 
 	clientWs.onmessage = (event) => {
 		console.log("Client message received");
+		console.log({messgae: event.data});
 		if (targetWs.readyState === WebSocket.OPEN) {
+			event.data.replace("\t", "");
+			console.log({after_messgae: event.data});
 			targetWs.send(event.data);
 		} else {
 			pendingMessages.push(event.data);
