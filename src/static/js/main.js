@@ -265,6 +265,7 @@ async function connectToWebsocket() {
 		model: CONFIG.API.MODEL_NAME,
 		generationConfig: {
 			responseModalities: responseTypeSelect.value,
+			outputAudioTranscription: {},
 			speechConfig: {
 				voiceConfig: {
 					prebuiltVoiceConfig: {
