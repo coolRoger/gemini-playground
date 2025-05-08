@@ -69,7 +69,7 @@ const handleOPTIONS = async () => {
 };
 
 const BASE_URL = "https://generativelanguage.googleapis.com";
-const API_VERSION = "v1beta2";
+const API_VERSION = "v1beta3";
 
 // https://github.com/google-gemini/generative-ai-js/blob/cf223ff4a1ee5a2d944c53cddb8976136382bee6/src/requests/request.ts#L71
 const API_CLIENT = "genai-js/0.24.0"; // npm view @google/generative-ai version
